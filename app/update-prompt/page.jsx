@@ -1,5 +1,5 @@
 "use client"
-import {useState,useEffect} from 'react'
+import {useState,useEffect, Suspense} from 'react'
 import {useRouter,useSearchParams} from 'next/navigation'
 import Form from '@components/Form'
 import Loading from '@app/profile/loading'
@@ -64,4 +64,12 @@ const EditPrompt = () => {
   )
 }
 
-export default EditPrompt
+const SuspenseWrapper = () => {
+    return (
+      <Suspense fallback={<Loading />}>
+        <EditPrompt />
+      </Suspense>
+    );
+  };
+  
+  export default SuspenseWrapper;
