@@ -1,9 +1,10 @@
+"use client";
 import { Suspense } from 'react';
 import EditPrompt from './page';
 
 const UpdatePromptPage = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense>
       <EditPrompt />
     </Suspense>
   );
