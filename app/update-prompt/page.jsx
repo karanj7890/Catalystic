@@ -2,10 +2,13 @@
 import {useState,useEffect} from 'react'
 import {useRouter,useSearchParams} from 'next/navigation'
 import Form from '@components/Form'
+import { Suspense } from 'react'
+import Loading from '@app/profile/loading'
 
 const EditPrompt = () => {
     const router= useRouter();
     const [submitting, setSubmitting] = useState(false);
+    const [loading, setLoading] = useState(true);
     const searchParams= useSearchParams();
     const promptId= searchParams.get('id');
     const [post, setPost] = useState({
@@ -20,6 +23,7 @@ const EditPrompt = () => {
                 prompt:data.prompt,
                 tag:data.tag
             })
+            setLoading(false)
         }
         if(promptId) getPromptDetails()
     },[promptId])
@@ -46,6 +50,10 @@ const EditPrompt = () => {
             setSubmitting(false);
         }
     }
+
+    if (loading) {
+        return <Loading/>;
+      }
   return (
     <Form 
     type="Edit"

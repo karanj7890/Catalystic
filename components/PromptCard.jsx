@@ -10,8 +10,6 @@ const PromptCard = ({ post, handleEdit, handleDelete,handleTagClick }) => {
   const router = useRouter();
 
   const [copied, setCopied] = useState("");
-  const [filteredPosts, setFilteredPosts] = useState([]);
-  const [selectedTag, setSelectedTag] = useState(null);
 
   const handleProfileClick = () => {
     console.log(post);
