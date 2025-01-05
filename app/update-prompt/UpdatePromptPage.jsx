@@ -3,7 +3,7 @@ import EditPrompt from './page';
 
 const UpdatePromptPage = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense>
       <EditPrompt />
     </Suspense>
   );

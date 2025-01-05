@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Catalystic - A Prompt App
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Catalystic is a user-driven prompt application where users can create, edit, and delete prompts, interact with others, and discover creative prompts shared by the community. It leverages modern web technologies for a seamless experience.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend**: Next.js
+- **Authentication**: Next-Auth (Google Sign-In)
+- **Database**: MongoDB(with Mongoose)
+- **Authentication API**: Google Console
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- **User Authentication**: Sign in using Google with Next-Auth.
+- **Create Prompts**: Users can create, edit, and delete their own prompts.
+- **Profile Management**: Users can view their all posts created by them in the profile.
+- **Browse Posts**: Users can explore prompts created by others and view their profiles.
+- **Search Functionality**: Users can search for prompts by:
+  - **Username**: Find prompts created by a specific user.
+  - **Tags**: Search prompts based on tags. Tags are clickable and lead to other posts with the same tags.
+- **Copy to Clipboard**: Prompts can be copied to your clipboard for easy use and sharing.
+  
+## How to Use
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Login**: Use Google Sign-In to log into your account.
+2. **Create Prompts**: After logging in, you can create a new prompt by navigating to the create page.
+3. **Manage Prompts**: Edit or delete your existing prompts from the profile page.
+4. **Browse Prompts**: Explore other users' prompts from the homepage or search for specific prompts using the search bar.
+5. **Explore Tags**: Click on tags to see prompts related to that tag.
+6. **Copy Prompts**: Copy a prompt to your clipboard for personal use.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

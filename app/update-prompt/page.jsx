@@ -2,7 +2,6 @@
 import {useState,useEffect} from 'react'
 import {useRouter,useSearchParams} from 'next/navigation'
 import Form from '@components/Form'
-import { Suspense } from 'react'
 import Loading from '@app/profile/loading'
 
 const EditPrompt = () => {
@@ -31,7 +30,7 @@ const EditPrompt = () => {
     const updatePrompt= async (e)=>{
         e.preventDefault();
         setSubmitting(true);
-        if(!promptId) alert("Prompt ID not found")
+        if(!promptId) return alert("Prompt ID not found")
         try {
             const response= await fetch(`/api/prompt/${promptId}`,{
                 method:'PATCH',
